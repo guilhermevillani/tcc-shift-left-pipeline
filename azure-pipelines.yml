@@ -1,0 +1,7 @@
+steps:
+- task: DotNetCoreCLI@2
+  displayName: 'Executar Testes de Unidade e Validar Cobertura'
+  inputs:
+    command: test
+    projects: '**/*Tests/*.csproj'
+    arguments: '--configuration Release --collect:"Code Coverage"'
